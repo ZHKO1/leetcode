@@ -18,6 +18,7 @@
  */
 // 严格来说空间不算常量，还是需要参考下别的解法
 // 而且写得太蠢了，需要优雅点
+// 正解https://leetcode-cn.com/problems/sort-list/solution/148-pai-xu-lian-biao-bottom-to-up-o1-kong-jian-by-/
 var sortList = function(head) {
   return sortList_(head).head;
 };
