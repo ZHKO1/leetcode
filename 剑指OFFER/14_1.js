@@ -1,9 +1,8 @@
-// 343
 /**
  * @param {number} n
  * @return {number}
  */
-var integerBreak = function(n) {
+var cuttingRope = function(n) {
   let cacheArray = [0, 1];
   return dfs(n);
 
@@ -22,18 +21,4 @@ var integerBreak = function(n) {
     cacheArray[n] = result;
     return cacheArray[n];
   }
-};
-// 191
-/**
- * @param {number} n - a positive integer
- * @return {number}
- */
-// 参考了网上的解法
-var hammingWeight = function(n) {
-    var result = 0;
-    while(n){
-      result += 1;
-      n = n & (n - 1);
-    }
-    return result;
 };

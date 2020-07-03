@@ -4,6 +4,8 @@
  * @param {number} k
  * @return {number}
  */
+// 顺带一提...初看时我理解错意思了...以为机器人能随便走，只需要算符合的格子数量就行
+// 结果意思是要能连续走
 var movingCount = function(m, n, k) {
   var height = n;
   var width = m;
