@@ -1,17 +1,3 @@
-/*
-  树
-  1. 前序遍历，中序遍历，后序遍历 递归/循环
-  2. 宽度优先遍历
-  3. 最大/小堆 红黑树
-  查找与排序
-  1. 二分查找
-  2. 插入排序 冒泡排序 归并排序 快速排序 （额外空间消耗，平均时间复杂度，最差时间复杂度）
-
-
-  TODO 7
-*/
-
-// 19
 /**
  * @param {string} s
  * @param {string} p
@@ -112,3 +98,42 @@ var isMatch = function(s, p) {
     return result
   }
 };
+
+var testCase = [
+  {s:'aa', p:"a", result: false},
+  {s:'aa', p:"a*", result: true},
+  {s:'ab', p:".*", result: true},
+  {s:'aab', p:"c*a*b", result: true},
+  {s:'mississippi', p:"mis*is*p*.", result: false},
+  {s:'mississippi', p:"mis*is*ip*.", result: true},
+ 
+
+  {s:'', p:"", result: true},
+  {s:'', p:"a", result: false},
+  {s:'', p:".*", result: true},
+  {s:'', p:".*.*.*", result: true},
+  {s:'abcdefgegeqeesadasdasdasdasdasdasd', p:".*.*.*", result: true},
+  {s:'abcdefg', p:"abcdefg", result: true},
+  {s:'aaaabc', p:"a*bc", result: true},
+  {s:'abbbbc', p:"ab*c", result: true},
+  {s:'abbbbc', p:"a.*c", result: true},
+  {s:'abccccc', p:"abc*", result: true},
+  {s:'abccccc', p:"ab.*", result: true},
+  {s:'abccccc', p:"ac*", result: false},
+  {s:'', p:"abc*", result: false},
+  {s:'aaaabbbcccdddd', p:"a*b*c*", result: false},
+
+  {s:'aaa', p:"a.a", result: true},
+  {s:'aaa', p:"ab*ac*a", result: true},
+  
+
+  
+  
+]
+
+testCase.forEach(({s,p,result}, index) => {
+  var result_my = isMatch(s,p);
+  if(result_my !== result){
+    console.log(s,p,result_my)    
+  }
+})
